@@ -16,6 +16,12 @@ java {
 	}
 }
 
+repositories {
+    maven {
+          url "https://nexus.apps-pruebas.credibanco.com/repository/maven-all-public/"
+    }
+}
+
 ext {
 	set('springGrpcVersion', "0.11.0")
 }

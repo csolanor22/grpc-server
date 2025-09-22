@@ -8,6 +8,8 @@ USER root
 WORKDIR /workspace/app
 COPY . .
 
+RUN chmod +x gradlew
+
 # Compilar en modo nativo con Gradle
 RUN ./gradlew build -x test -Dquarkus.native.container-build=true \
     && ./gradlew nativeCompile -x test
